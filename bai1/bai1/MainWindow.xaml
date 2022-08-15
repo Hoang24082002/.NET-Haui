@@ -1,0 +1,32 @@
+﻿<Window x:Class="bai1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bai1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Loaded="Grid_Loaded">
+        <ComboBox x:Name="cboloaisanpham" HorizontalAlignment="Left" Margin="126,118,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtmasanpham" HorizontalAlignment="Left" Margin="126,40,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txttensanpham" HorizontalAlignment="Left" Margin="126,80,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtdongia" HorizontalAlignment="Left" Margin="126,163,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtsoluong" HorizontalAlignment="Left" Margin="126,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <DataGrid x:Name="sanpham" Margin="51,254,83,10">
+            <DataGrid.Columns>
+               
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Ma san pham" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ten san pham" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
+        <Label Content="Loai san pham" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+        <Label Content="Don gia" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top"/>
+        <Label Content="So luong" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <Button x:Name="btnthem" Content="Them" HorizontalAlignment="Left" Margin="400,36,0,0" VerticalAlignment="Top" Width="78" Click="btnthem_Click"/>
+        <Button x:Name="btnsua" Content="Sua" HorizontalAlignment="Left" Margin="400,80,0,0" VerticalAlignment="Top" Width="78" Click="btnsua_Click"/>
+        <Button x:Name="btnxoa" Content="Xoa" HorizontalAlignment="Left" Margin="400,118,0,0" VerticalAlignment="Top" Width="78" Click="btnxoa_Click"/>
+        <Button x:Name="btntim" Content="Tim" HorizontalAlignment="Left" Margin="400,157,0,0" VerticalAlignment="Top" Width="78" Click="btntim_Click"/>
+        <Button x:Name="btnthongke" Content="Thong ke" HorizontalAlignment="Left" Margin="400,202,0,0" VerticalAlignment="Top" Width="78" Click="btnthongke_Click"/>
+
+    </Grid>
+</Window>
