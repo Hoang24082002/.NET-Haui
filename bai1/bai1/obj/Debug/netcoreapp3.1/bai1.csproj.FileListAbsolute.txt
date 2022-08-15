@@ -58,3 +58,5 @@ C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\.NET\ON_TAP_TX2\bai1\bai1\obj\De
 C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\.NET\ON_TAP_TX2\bai1\bai1\obj\Debug\netcoreapp3.1\bai1.dll
 C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\.NET\ON_TAP_TX2\bai1\bai1\obj\Debug\netcoreapp3.1\bai1.pdb
 C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\.NET\ON_TAP_TX2\bai1\bai1\obj\Debug\netcoreapp3.1\bai1.genruntimeconfig.cache
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\.NET\ON_TAP_TX2\bai1\bai1\obj\Debug\netcoreapp3.1\Window1.g.cs
+C:\Users\httt2\OneDrive\Documents\haui_ki1_nam3\.NET\ON_TAP_TX2\bai1\bai1\obj\Debug\netcoreapp3.1\Window1.baml

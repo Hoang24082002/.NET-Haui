@@ -137,7 +137,10 @@ namespace bai1
 
         private void btntim_Click(object sender, RoutedEventArgs e)
         {
+            /*
             var sp = (from SanPham in db.SanPhams where SanPham.Masp.Contains(txtmasanpham.Text) select SanPham);
+            */
+            var sp = db.SanPhams.Where(x => x.Masp.Contains(txtmasanpham.Text)).Select(sp => new { sp.Masp, sp.Tensp, sp.Soluong, sp.Dongia });
             if (sp != null)
             {
                 sanpham.ItemsSource = sp.ToList();
@@ -150,7 +153,8 @@ namespace bai1
 
         private void btnthongke_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow myWindow = new MainWindow();
+            myWindow.Show();
         }
 
         //Chọn dòng trong DataGrid
