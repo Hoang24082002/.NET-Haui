@@ -64,6 +64,7 @@ namespace bai1
             HienThiCB();
         }
 
+        //Thêm dữ liệu
         private void btnthem_Click(object sender, RoutedEventArgs e)
         {
             var query = db.SanPhams.SingleOrDefault(t => t.Masp.Equals(txtmasanpham.Text));
@@ -79,8 +80,8 @@ namespace bai1
                 spMoi.Tensp = txttensanpham.Text;
                 spMoi.Dongia = int.Parse(txtdongia.Text);
                 spMoi.Soluong = int.Parse(txtsoluong.Text);
-                LoaiSanPham intemSelected = (LoaiSanPham)cboloaisanpham.SelectedItem;
-                spMoi.Maloai = intemSelected.Maloai;
+                LoaiSanPham loaiduocchon = (LoaiSanPham)cboloaisanpham.SelectedItem;
+                spMoi.Maloai = loaiduocchon.Maloai;
                 db.SanPhams.Add(spMoi);
                 db.SaveChanges();
                 MessageBox.Show("Them san pham thanh cong", "Thong bao");
@@ -107,6 +108,28 @@ namespace bai1
         private void btnthongke_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        //Chọn dòng trong DataGrid
+        private void sanpham_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            if (sanpham.SelectedItem != null)
+            {
+                try
+                {
+                    Type t = sanpham.SelectedItem.GetType();
+                    PropertyInfo[] p = t.GetProperties();
+                    txtmasanpham.Text = p[0].GetValue(sanpham.SelectedValue).ToString();
+                    txttensanpham.Text = p[1].GetValue(sanpham.SelectedValue).ToString();
+                    cboloaisanpham.SelectedValue = p[2].GetValue(sanpham.SelectedValue).ToString();
+                    txtsoluong.Text = p[3].GetValue(sanpham.SelectedValue).ToString();
+                    txtdongia.Text = p[4].GetValue(sanpham.SelectedValue).ToString();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Co loi khi chon hang" + ex.Message, "Thong bao");
+                }
+            }
         }
     }
 }

@@ -12,7 +12,7 @@
         <TextBox x:Name="txttensanpham" HorizontalAlignment="Left" Margin="126,80,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtdongia" HorizontalAlignment="Left" Margin="126,163,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtsoluong" HorizontalAlignment="Left" Margin="126,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-        <DataGrid x:Name="sanpham" Margin="51,254,83,10">
+        <DataGrid x:Name="sanpham" Margin="51,254,83,10" SelectedCellsChanged="sanpham_SelectedCellsChanged">
             <DataGrid.Columns>
                
             </DataGrid.Columns>
