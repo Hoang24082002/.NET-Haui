@@ -92,17 +92,60 @@ namespace bai1
 
         private void btnsua_Click(object sender, RoutedEventArgs e)
         {
-
+            //Lấy sản phẩm theo mã sản phẩm, trả về Object
+            var spsua = db.SanPhams.SingleOrDefault(t => t.Masp.Equals(txtmasanpham.Text)); 
+           
+  
+            if (spsua != null)
+            {
+                spsua.Tensp = txttensanpham.Text;
+                //Lấy ra LoaiSanPham, trả về Object
+                LoaiSanPham item = (LoaiSanPham)cboloaisanpham.SelectedItem;
+                spsua.Maloai = item.Maloai;
+                spsua.Dongia = int.Parse(txtdongia.Text);
+                spsua.Soluong = int.Parse(txtsoluong.Text);
+                db.SaveChanges();
+                MessageBox.Show("Sua thanh cong!", "Thong bao");
+                HienThiDuLieu();
+            }
+            else
+            {
+                MessageBox.Show("Khong tim thay san pham can sua!");
+            }
+            
         }
 
         private void btnxoa_Click(object sender, RoutedEventArgs e)
         {
+            var spxoa = db.SanPhams.SingleOrDefault(t => t.Masp.Equals(txtmasanpham.Text));
+            if (spxoa !=null)
+            {
+                MessageBoxResult rs = MessageBox.Show("Ban co chac chan muon xoa?", "Thong bao", MessageBoxButton.YesNo);
+                if (rs == MessageBoxResult.Yes)
+                {
+                    db.SanPhams.Remove(spxoa);
+                    db.SaveChanges();
+                    HienThiDuLieu();
+                }
+                else
+                {
+                    MessageBox.Show("Khong co san pham nay de xoa!", "thong bao");
+                }
 
+            }
         }
 
         private void btntim_Click(object sender, RoutedEventArgs e)
         {
-
+            var sp = (from SanPham in db.SanPhams where SanPham.Masp.Contains(txtmasanpham.Text) select SanPham);
+            if (sp != null)
+            {
+                sanpham.ItemsSource = sp.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Khong tim thay san pham!", "Thong bao");
+            }  
         }
 
         private void btnthongke_Click(object sender, RoutedEventArgs e)
