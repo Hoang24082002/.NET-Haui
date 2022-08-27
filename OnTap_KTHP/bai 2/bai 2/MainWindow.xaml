@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:bai_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <!-- Bắt đầu khai báo nguồn -->
         <Grid.Resources>
             <!-- Khai báo Style cơ bản về font chữ cho mọi content-->
@@ -15,7 +15,7 @@
                 <Setter Property="FontSize" Value="20"></Setter>
                 <Setter Property="FontStyle" Value="Italic"></Setter>
             </Style>
-            
+
             <!-- Khai báo style kế thừa style trước, quy định cho textbox -->
             <Style BasedOn="{StaticResource baseStyle}" TargetType="TextBox">
                 <!-- Khai báo trigger khi trỏ chuột lướt qua thì màu đỏ -->
@@ -25,7 +25,7 @@
                     </Trigger>
                 </Style.Triggers>
             </Style>
-            
+
             <!-- Khai báo Style template quy định hình dạng button -->
             <Style TargetType="Button">
                 <!-- Setter ghi đè lên template mặc định của button -->
@@ -49,27 +49,37 @@
                 </Style.Triggers>
             </Style>
         </Grid.Resources>
-       
+
         <Label Content="QUẢN LÝ NHÂN VIÊN" HorizontalAlignment="Left" Margin="326,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="16" Foreground="blue"/>
-        <TextBox HorizontalAlignment="Left" Margin="138,41,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="138,64,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="138,87,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="138,110,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="138,133,0,0" VerticalAlignment="Top" Width="120"/>
-        <DataGrid Margin="13,176,130,92">
+        <TextBox x:Name="txtmanhanvien" HorizontalAlignment="Left" Margin="137,33,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.321"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="txthoten" HorizontalAlignment="Left" Margin="138,64,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtluong" HorizontalAlignment="Left" Margin="138,87,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtthuong" HorizontalAlignment="Left" Margin="138,110,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbomaphong" HorizontalAlignment="Left" Margin="138,133,0,0" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="dgvnhanvien" Margin="13,176,130,92" SelectedCellsChanged="DataGrid_SelectedCellsChanged"
+                  AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Mã phòng" Width="100" Binding="{Binding MaPhong}"/>
-                <DataGridTextColumn Header="Mã nhân viên" Width="100" Binding="{Binding MaNhanVien}"/>
-                <DataGridTextColumn Header="Họ tên" Width="100" Binding="{Binding HoTen}"/>
+                <DataGridTextColumn Header="Mã nhân viên" Width="100" Binding="{Binding MaNv}"/>
+                <DataGridTextColumn Header="Họ tên" Width="100" Binding="{Binding Hoten}"/>
                 <DataGridTextColumn Header="Lương" Width="100" Binding="{Binding Luong}"/>
                 <DataGridTextColumn Header="Thưởng" Width="100" Binding="{Binding Thuong}"/>
                 <DataGridTextColumn Header="Tổng tiền" Width="100" Binding="{Binding TongTien}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnthem" Content="Thêm"  HorizontalAlignment="Left" Margin="115,360,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="White" HorizontalContentAlignment="Left" ContentStringFormat=""/>
-        <Button x:Name="btnsua" Content="Sửa" HorizontalAlignment="Left" Margin="267,360,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-        <Button x:Name="btnxoa" Content="Xóa" HorizontalAlignment="Left" Margin="400,360,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-        <Button x:Name="btntimkiem" Content="Tìm" HorizontalAlignment="Left" Margin="539,360,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
+        <Button x:Name="btnthem" Content="Thêm"  HorizontalAlignment="Left" Margin="115,360,0,0" VerticalAlignment="Top" Width="80" Height="35" Click="btnthem_Click"/>
+        <Button x:Name="btnsua" Content="Sửa" HorizontalAlignment="Left" Margin="267,360,0,0" VerticalAlignment="Top" Width="80" Height="35" Click="btnsua_Click"/>
+        <Button x:Name="btnxoa" Content="Xóa" HorizontalAlignment="Left" Margin="400,360,0,0" VerticalAlignment="Top" Width="80" Height="35" Click="btnxoa_Click"/>
+        <Button x:Name="btntimkiem" Content="Tìm kiếm" HorizontalAlignment="Left" Margin="539,360,0,0" VerticalAlignment="Top" Width="80" Height="35" Click="btntimkiem_Click"/>
         <Label Content="Mã nhân viên" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top"/>
         <Label Content="Họ tên" HorizontalAlignment="Left" Margin="13,55,0,0" VerticalAlignment="Top"/>
         <Label Content="Lương" HorizontalAlignment="Left" Margin="13,77,0,0" VerticalAlignment="Top"/>
