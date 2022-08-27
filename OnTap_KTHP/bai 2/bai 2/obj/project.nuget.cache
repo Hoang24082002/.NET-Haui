@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tumDfDC21GFALcjAvpJzw4vnP+E/WxC34vmN5VkXd5/rxPF7AP5HCyBTA/amr+qs4aIorJTXNFHrLez+p+yJHw==",
+  "dgSpecHash": "t0lZlcbPGEUEpWl4oXBHFS8PkXLwuVhorUlCunGIMGUwEZwhsepwk5sUlzauE+Q2oxz5ViDrVEpNo2YroE9WCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj",
+  "projectFilePath": "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\.net\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\httt2\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\httt2\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

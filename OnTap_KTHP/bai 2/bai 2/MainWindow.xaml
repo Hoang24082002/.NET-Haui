@@ -15,6 +15,10 @@
                 <Setter Property="FontSize" Value="20"></Setter>
                 <Setter Property="FontStyle" Value="Italic"></Setter>
             </Style>
+            
+            <Style TargetType="DataGridColumnHeadersPresenter">
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+            </Style>
 
             <!-- Khai báo style kế thừa style trước, quy định cho textbox -->
             <Style BasedOn="{StaticResource baseStyle}" TargetType="TextBox">
@@ -26,7 +30,7 @@
                 </Style.Triggers>
             </Style>
 
-            <!-- Khai báo Style template quy định hình dạng button -->
+            <!-- Khai báo Style template quy định hình dạng button -->          
             <Style TargetType="Button">
                 <!-- Setter ghi đè lên template mặc định của button -->
                 <Setter Property="Foreground" Value="White"></Setter>
@@ -68,7 +72,7 @@
         <DataGrid x:Name="dgvnhanvien" Margin="13,176,130,92" SelectedCellsChanged="DataGrid_SelectedCellsChanged"
                   AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Mã phòng" Width="100" Binding="{Binding MaPhong}"/>
+                <DataGridTextColumn Header="Mã phòng" Width="100" Binding="{Binding MaPhong}" />
                 <DataGridTextColumn Header="Mã nhân viên" Width="100" Binding="{Binding MaNv}"/>
                 <DataGridTextColumn Header="Họ tên" Width="100" Binding="{Binding Hoten}"/>
                 <DataGridTextColumn Header="Lương" Width="100" Binding="{Binding Luong}"/>
