@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using bai_2.Models;
 using System.Text.RegularExpressions;
 using System.Reflection;
-
+using System.Globalization;
 namespace bai_2
 {
     /// <summary>
@@ -35,6 +35,7 @@ namespace bai_2
         private void HienThiDuLieu()
         {
             var query = from nv in db.Nhanviens
+                        let TongTienFormatted = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", nv.Luong + nv.Thuong)
                         orderby nv.Hoten
                         select new
                         {
@@ -43,7 +44,7 @@ namespace bai_2
                             nv.Hoten,
                             nv.Luong,
                             nv.Thuong,
-                            TongTien=nv.Luong+nv.Thuong
+                            TongTienFormatted
                         };
             dgvnhanvien.ItemsSource = query.ToList();
         }

@@ -15,7 +15,9 @@
                 <Setter Property="FontSize" Value="20"></Setter>
                 <Setter Property="FontStyle" Value="Italic"></Setter>
             </Style>
-            
+            <Style TargetType="DataGridColumnHeadersPresenter">
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+            </Style>
             <!-- Khai báo style kế thừa style trước, quy định cho textbox -->
             <Style BasedOn="{StaticResource baseStyle}" TargetType="TextBox">
                 <!-- Khai báo trigger khi trỏ chuột lướt qua thì màu đỏ -->
@@ -26,12 +28,7 @@
                 </Style.Triggers>
             </Style>
 
-            <!-- Bôi đậm header trong bảng -->
-            <Style TargetType="DataGridColumnHeadersPresenter">
-                <Setter Property="FontWeight" Value="Bold"></Setter>
-            </Style>
-
-            <!-- Khai báo Style template quy định hình dạng button -->          
+            <!-- Khai báo Style template quy định hình dạng button -->
             <Style TargetType="Button">
                 <!-- Setter ghi đè lên template mặc định của button -->
                 <Setter Property="Foreground" Value="White"></Setter>
@@ -40,7 +37,10 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
                             <Grid>
+                                <!--
                                 <Ellipse Fill="Blue" />
+                                -->
+                                <Border Background="Blue" CornerRadius="15" BorderBrush="Black"></Border>
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Grid>
                         </ControlTemplate>
@@ -73,12 +73,12 @@
         <DataGrid x:Name="dgvnhanvien" Margin="13,176,130,92" SelectedCellsChanged="DataGrid_SelectedCellsChanged"
                   AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Mã phòng" Width="100" Binding="{Binding MaPhong}" />
+                <DataGridTextColumn Header="Mã phòng" Width="100" Binding="{Binding MaPhong}"/>
                 <DataGridTextColumn Header="Mã nhân viên" Width="100" Binding="{Binding MaNv}"/>
                 <DataGridTextColumn Header="Họ tên" Width="100" Binding="{Binding Hoten}"/>
                 <DataGridTextColumn Header="Lương" Width="100" Binding="{Binding Luong}"/>
                 <DataGridTextColumn Header="Thưởng" Width="100" Binding="{Binding Thuong}"/>
-                <DataGridTextColumn Header="Tổng tiền" Width="100" Binding="{Binding TongTien}"/>
+                <DataGridTextColumn Header="Tổng tiền" Width="100" Binding="{Binding TongTienFormatted}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnthem" Content="Thêm"  HorizontalAlignment="Left" Margin="115,360,0,0" VerticalAlignment="Top" Width="80" Height="35" Click="btnthem_Click"/>

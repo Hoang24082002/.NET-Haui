@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\.net\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj": {}
+    "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\.net\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj": {
+    "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\.net\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj",
+        "projectUniqueName": "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj",
         "projectName": "bai 2",
-        "projectPath": "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\.net\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj",
+        "projectPath": "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\OnTap_KTHP\\bai 2\\bai 2\\bai 2.csproj",
         "packagesPath": "C:\\Users\\httt2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\.net\\OnTap_KTHP\\bai 2\\bai 2\\obj\\",
+        "outputPath": "C:\\Users\\httt2\\OneDrive\\Documents\\haui_ki1_nam3\\.NET\\OnTap_KTHP\\bai 2\\bai 2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\httt2\\AppData\\Roaming\\NuGet\\NuGet.Config",
