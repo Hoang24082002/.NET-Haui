@@ -16,10 +16,6 @@
                 <Setter Property="FontStyle" Value="Italic"></Setter>
             </Style>
             
-            <Style TargetType="DataGridColumnHeadersPresenter">
-                <Setter Property="FontWeight" Value="Bold"></Setter>
-            </Style>
-
             <!-- Khai báo style kế thừa style trước, quy định cho textbox -->
             <Style BasedOn="{StaticResource baseStyle}" TargetType="TextBox">
                 <!-- Khai báo trigger khi trỏ chuột lướt qua thì màu đỏ -->
@@ -28,6 +24,11 @@
                         <Setter Property="Foreground" Value="Red"></Setter>
                     </Trigger>
                 </Style.Triggers>
+            </Style>
+
+            <!-- Bôi đậm header trong bảng -->
+            <Style TargetType="DataGridColumnHeadersPresenter">
+                <Setter Property="FontWeight" Value="Bold"></Setter>
             </Style>
 
             <!-- Khai báo Style template quy định hình dạng button -->          
