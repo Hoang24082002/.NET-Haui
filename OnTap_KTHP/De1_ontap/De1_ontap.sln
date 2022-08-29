@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "De1_ontap", "De1_ontap\De1_ontap.csproj", "{A08D4195-4E79-4126-9C4B-8EB61AEC96D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A08D4195-4E79-4126-9C4B-8EB61AEC96D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08D4195-4E79-4126-9C4B-8EB61AEC96D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08D4195-4E79-4126-9C4B-8EB61AEC96D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08D4195-4E79-4126-9C4B-8EB61AEC96D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E780D27A-0095-4F92-93A1-222C593F49B7}
+	EndGlobalSection
+EndGlobal
