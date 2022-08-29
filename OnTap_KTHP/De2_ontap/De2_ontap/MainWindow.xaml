@@ -1,0 +1,68 @@
+﻿<Window x:Class="De2_ontap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:De2_ontap"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Loaded="Grid_Loaded">
+        <Grid.Resources>
+            <Style x:Key="baseStyle" TargetType="Control">
+                <Setter Property="FontFamily" Value="Time New Roman"/>
+            </Style>
+
+            <Style TargetType="TextBox">
+                <Setter Property="Foreground" Value="Blue"/>
+            </Style>
+
+            <Style TargetType="DataGridColumnHeader">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <!-- ==Can giua header -->
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+
+                                <Ellipse Fill="Blue"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </Grid.Resources>
+        <TextBox x:Name="txtmasanpham" HorizontalAlignment="Left" Margin="179,30,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txttensanpham" HorizontalAlignment="Left" Margin="179,69,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtdongia" HorizontalAlignment="Left" Margin="179,110,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtsoluongban" HorizontalAlignment="Left" Margin="179,153,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbonhomhang" HorizontalAlignment="Left" Margin="179,195,0,0" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="dgvsanpham" Margin="30,242,30,74" AutoGenerateColumns="False" CanUserAddRows="False" SelectedCellsChanged="dgvsanpham_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã SP" Binding="{Binding MaSp}" Width="*"/>
+                <DataGridTextColumn Header="Tên sản phẩm" Binding="{Binding TenSanPham}" Width="*"/>
+                <DataGridTextColumn Header="Đơn giá" Binding="{Binding DonGia}" Width="*"/>
+                <DataGridTextColumn Header="Số lượng bán" Binding="{Binding SoLuongBan}" Width="*"/>
+                <DataGridTextColumn Header="Nhóm hàng" Binding="{Binding TenNhomHang}" Width="*"/>
+                <DataGridTextColumn Header="Tiền bán" Binding="{Binding TienBan}" Width="*" FontWeight="Bold" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnthem" Content="Thêm" HorizontalAlignment="Left" Margin="116,365,0,0" VerticalAlignment="Top" Width="97" Height="42" Click="btnthem_Click"/>
+        <Button x:Name="btntim" Content="Tìm" HorizontalAlignment="Left" Margin="253,365,0,0" VerticalAlignment="Top" Width="97" Height="42" Click="btntim_Click"/>
+        <Label Content="Mã sản phẩm" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tên sản phẩm" HorizontalAlignment="Left" Margin="30,65,0,0" VerticalAlignment="Top"/>
+        <Label Content="Đơn giá" HorizontalAlignment="Left" Margin="30,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="Số lượng bán" HorizontalAlignment="Left" Margin="30,153,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nhóm hàng" HorizontalAlignment="Left" Margin="30,191,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="txtsua" Content="Sửa" HorizontalAlignment="Left" Margin="400,365,0,0" VerticalAlignment="Top" Height="42" Width="97" Click="txtsua_Click"/>
+        <Button x:Name="txtxoa" Content="Xóa" HorizontalAlignment="Left" Margin="532,365,0,0" VerticalAlignment="Top" Height="42" Width="97" Click="txtxoa_Click"/>
+
+    </Grid>
+</Window>
